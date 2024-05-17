@@ -4,8 +4,7 @@ export const rateMovie = async (id: number, rating: number) => {
     headers: {
       accept: "application/json",
       "Content-Type": "application/json;charset=utf-8",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxY2YyYzFlNmI1NjQwNmUwYzg3MWI3NjM1NjY1ZGEzNyIsInN1YiI6IjY2MzdiYTFmY2FhNTA4MDEyNmY1MWNhNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1-g5rFKMQplNSzwlpfXnDCpowWgNImAITfjX4sen5yE",
+      Authorization: `Bearer ${import.meta.env.VITE_API_READ_TOKEN}`,
     },
     body: `{"value":${rating}}`,
   });
@@ -20,8 +19,7 @@ export const rateTvShow = async (id: number, rating: number) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json;charset=utf-8",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxY2YyYzFlNmI1NjQwNmUwYzg3MWI3NjM1NjY1ZGEzNyIsInN1YiI6IjY2MzdiYTFmY2FhNTA4MDEyNmY1MWNhNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1-g5rFKMQplNSzwlpfXnDCpowWgNImAITfjX4sen5yE",
+      Authorization: `Bearer ${import.meta.env.VITE_API_READ_TOKEN}`,
     },
     body: `{"value":${rating}}`,
   });
